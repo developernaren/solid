@@ -8,7 +8,6 @@
 ### Steps
 
 1. We will first design an application just to do the job we may use functions
-1. We are going to user classe for the application
+1. We are going to user classes for the application
 1. We are going to use solid principle later on
-
 
