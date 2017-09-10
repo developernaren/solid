@@ -10,8 +10,8 @@ class Biscuit implements Bakery
         return 'biscuit';
     }
 
-    function getCost()
+    function getCost($price = 0)
     {
-        return 200;
+        return (empty($price)) ? 200 :$price;
     }
 }

@@ -5,6 +5,7 @@ namespace Classes;
 
 use Classes\PaymentMethods\NeedsCard;
 use Classes\PaymentMethods\PaymentMethod;
+use Mockery\CountValidator\Exception;
 
 class Pay
 {
@@ -30,8 +31,17 @@ class Pay
 
     function getAmount()
     {
+        if($this->isSuccessful()) {
+            return $this->item->getCost();
+        }
 
-        return $this->item->getCost();
+        throw new Exception('Payment not done');
+
+    }
+
+    function isSuccessful()
+    {
+        return $this->method->validatePayment();
     }
 
     function getSummary()

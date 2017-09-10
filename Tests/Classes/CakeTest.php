@@ -22,4 +22,11 @@ class CakeTest extends TestCase
     {
         $this->assertSame($this->cake->getName(), 'cake');
     }
+
+    public function testGetCost()
+    {
+        $this->assertNotSame($this->cake->getCost(), 100);
+    }
+
+
 }
