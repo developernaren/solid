@@ -11,5 +11,8 @@
             "email": "developer.naren@gmail.com"
         }
     ],
-    "require": {}
+    "require": {
+        "phpunit/phpunit": "^6.3",
+        "mockery/mockery": "^0.9.9"
+    }
 }

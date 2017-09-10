@@ -11,3 +11,7 @@
 1. We are going to user classes for the application
 1. We are going to use solid principle later on
 
+### Phases
+
+1. User can sell cakes, biscuits and donuts with any method
+1. 
