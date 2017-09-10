@@ -22,11 +22,4 @@ class CakeTest extends TestCase
     {
         $this->assertSame($this->cake->getName(), 'cake');
     }
-
-    
-
-
-
-
-
 }

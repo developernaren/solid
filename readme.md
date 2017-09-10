@@ -14,4 +14,12 @@
 ### Phases
 
 1. User can sell cakes, biscuits and donuts with any method
-1. 
+
+#### Task
+
+1. User can apply code, if it is DASHAIN, it is valid
+1. Discount Conditions:
+* If donut is >5 in quantity, you get 10% off
+* If cake is >10 in quantity, you get 40% off
+* You do not get discount for donut
+
