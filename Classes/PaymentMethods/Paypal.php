@@ -6,28 +6,22 @@ class Paypal implements PaymentMethod, NeedsCard
 {
     private $cardNumber;
 
-    public function getName()
+    public function getName(): string
     {
         return 'paypal';
     }
 
-    /**
-     * @return mixed
-     */
-    public function getCardNumber()
+    public function getCardNumber(): int
     {
         return $this->cardNumber;
     }
 
-    /**
-     * @param mixed $cardNumber
-     */
-    public function setCardNumber($cardNumber)
+    public function setCardNumber(int $cardNumber): void
     {
         $this->cardNumber = $cardNumber;
     }
 
-    public function validatePayment()
+    public function validatePayment(): bool
     {
         return $this->cardNumber === '1234';
     }

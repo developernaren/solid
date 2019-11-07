@@ -2,11 +2,16 @@
 
 namespace Classes;
 
-use Mockery\CountValidator\Exception;
+use Exception;
 
 class Factory
 {
-    public static function create($name)
+    /**
+     * @param $name
+     * @return Bakery
+     * @throws Exception
+     */
+    public static function create($name): Bakery
     {
         switch ($name) {
 
@@ -18,6 +23,6 @@ class Factory
                 return new Donut();
         }
 
-        throw new Exception('We do not sell ' . $name);
+        throw new Exception(sprintf('We do not sell %s', $name));
     }
 }

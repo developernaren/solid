@@ -2,21 +2,24 @@
 
 namespace Classes\PaymentMethods;
 
-use Mockery\CountValidator\Exception;
+use Exception;
 
 class Factory
 {
-    public static function create($name)
+    /**
+     * @param $name
+     * @return PaymentMethod
+     * @throws Exception
+     */
+    public static function create($name): PaymentMethod
     {
         switch ($name) {
-
             case 'paypal':
                 return new Paypal();
             case 'stripe':
                 return new Stripe();
             case 'cash':
                 return new Cash();
-
         }
 
         throw new Exception('Invalid Payment Method');

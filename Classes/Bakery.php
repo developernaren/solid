@@ -4,7 +4,7 @@ namespace Classes;
 
 interface Bakery
 {
-    public function getName();
+    public function getName(): string;
 
-    public function getCost();
+    public function getCost(): float;
 }

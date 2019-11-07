@@ -6,45 +6,28 @@ use Classes\Bakery;
 
 class Stripe implements PaymentMethod, NeedsCard
 {
-    public $cardNumber;
-    public $item;
+    private $cardNumber;
 
-    public function setItem(Bakery $bakery)
-    {
-        $this->item = $bakery;
-    }
-
-    public function getItemName()
-    {
-        return $this->item->getName();
-    }
-
-    public function getName()
+    public function getName(): string
     {
         return 'name';
     }
 
-    public function validatePayment()
+    public function validatePayment(): bool
     {
         return $this->cardNumber === '5678';
     }
 
-    public function getAmount()
+    public function getAmount(): int
     {
     }
 
-    /**
-     * @return mixed
-     */
-    public function getCardNumber()
+    public function getCardNumber(): int
     {
         return $this->cardNumber;
     }
 
-    /**
-     * @param mixed $cardNumber
-     */
-    public function setCardNumber($cardNumber)
+    public function setCardNumber(int $cardNumber): void
     {
         $this->cardNumber = $cardNumber;
     }
