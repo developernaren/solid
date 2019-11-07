@@ -2,10 +2,9 @@
 
 namespace Classes\PaymentMethods;
 
-
 class Cash implements PaymentMethod
 {
-    function getName()
+    public function getName()
     {
         return 'cash';
     }

@@ -10,7 +10,6 @@ use PHPUnit\Framework\TestCase;
 
 class PayTest extends TestCase
 {
-
     public function testGetAmountReturnsCorrectAmountWhenPaymentIsSuccessful()
     {
         $stripe = Mockery::mock(Stripe::class)->makePartial();
@@ -21,9 +20,5 @@ class PayTest extends TestCase
         $pay->setItem(new Cake());
         $pay->setPaymentMethod($stripe);
         $this->assertSame($pay->getAmount(), 500);
-
-
-
-
     }
 }

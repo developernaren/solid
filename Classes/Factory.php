@@ -2,12 +2,10 @@
 
 namespace Classes;
 
-
 use Mockery\CountValidator\Exception;
 
 class Factory
 {
-
     public static function create($name)
     {
         switch ($name) {
@@ -22,5 +20,4 @@ class Factory
 
         throw new Exception('We do not sell ' . $name);
     }
-
 }

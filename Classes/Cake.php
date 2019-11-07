@@ -4,7 +4,6 @@ namespace Classes;
 
 class Cake implements Bakery
 {
-
     public function getName()
     {
         return 'cake';

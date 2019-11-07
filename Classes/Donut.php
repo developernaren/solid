@@ -2,16 +2,14 @@
 
 namespace Classes;
 
-
 class Donut
 {
-
-    function getName()
+    public function getName()
     {
         return 'donut';
     }
 
-    function getCost()
+    public function getCost()
     {
         return 10;
     }

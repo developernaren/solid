@@ -2,14 +2,12 @@
 
 namespace Tests\Classes;
 
-
 use Classes\Biscuit;
 use Mockery;
 use PHPUnit\Framework\TestCase;
 
 class BiscuitTest extends TestCase
 {
-
     private $biscuit;
 
     public function setUp()
@@ -25,16 +23,12 @@ class BiscuitTest extends TestCase
 
     public function testWhenCostIsNotProvidedItIs200()
     {
-
         $this->assertSame($this->biscuit->getCost(), 200);
     }
 
     public function testWhenCostIsProvidedItIsProvidedCost()
     {
-
         $this->assertSame($this->biscuit->getCost(10), 10);
         $this->assertNotSame($this->biscuit->getCost(10), 100);
     }
-
-
 }

@@ -2,15 +2,12 @@
 
 namespace Classes\PaymentMethods;
 
-
 use Mockery\CountValidator\Exception;
 
 class Factory
 {
-
     public static function create($name)
     {
-
         switch ($name) {
 
             case 'paypal':
@@ -24,5 +21,4 @@ class Factory
 
         throw new Exception('Invalid Payment Method');
     }
-
 }
