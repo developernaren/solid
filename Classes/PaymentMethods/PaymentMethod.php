@@ -4,5 +4,5 @@ namespace Classes\PaymentMethods;
 
 interface PaymentMethod
 {
-    public function getName();
+    public function getName(): string;
 }

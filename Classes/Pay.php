@@ -4,7 +4,7 @@ namespace Classes;
 
 use Classes\PaymentMethods\NeedsCard;
 use Classes\PaymentMethods\PaymentMethod;
-use Mockery\CountValidator\Exception;
+use Exception;
 
 class Pay
 {
@@ -13,9 +13,11 @@ class Pay
 
     public function pay()
     {
-        return $this->method instanceof  NeedsCard ?
-            $this->method->validatePayment():
-            true;
+        if ($this->method instanceof NeedsCard) {
+            return $this->method->validatePayment();
+        }
+
+        return true;
     }
 
     public function setItem(Bakery $bakery)
@@ -42,12 +44,8 @@ class Pay
         return $this->method->validatePayment();
     }
 
-    public function getSummary()
+    public function getSummary(): string
     {
-        return $this->item->getName()
-            . ' is bought with ' .
-            $this->method->getName() . ' with card ' .
-            $this->method->getCardNumber() .
-            ' paying ' . $this->item->getCost();
+        return sprintf('%s is bought with %s with card %d paying %d', $this->item->getName(), $this->method->getName(), $this->method->getCardNumber(), $this->item->getCost());
     }
 }

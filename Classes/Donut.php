@@ -2,14 +2,14 @@
 
 namespace Classes;
 
-class Donut
+class Donut implements Bakery
 {
-    public function getName()
+    public function getName(): string
     {
         return 'donut';
     }
 
-    public function getCost()
+    public function getCost(): float
     {
         return 10;
     }

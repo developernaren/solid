@@ -4,7 +4,7 @@ namespace Classes\PaymentMethods;
 
 class Cash implements PaymentMethod
 {
-    public function getName()
+    public function getName(): string
     {
         return 'cash';
     }

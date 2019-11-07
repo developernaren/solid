@@ -4,12 +4,12 @@ namespace Classes;
 
 class Cake implements Bakery
 {
-    public function getName()
+    public function getName(): string
     {
         return 'cake';
     }
 
-    public function getCost()
+    public function getCost(): float
     {
         return 500;
     }
