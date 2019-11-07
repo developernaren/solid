@@ -4,13 +4,12 @@ namespace Classes;
 
 class Biscuit implements Bakery
 {
-
-    function getName()
+    public function getName()
     {
         return 'biscuit';
     }
 
-    function getCost($price = 0)
+    public function getCost($price = 0)
     {
         return (empty($price)) ? 200 :$price;
     }

@@ -2,12 +2,11 @@
 
 namespace Classes\PaymentMethods;
 
-
 class Paypal implements PaymentMethod, NeedsCard
 {
     private $cardNumber;
 
-    function getName()
+    public function getName()
     {
         return 'paypal';
     }
@@ -28,9 +27,8 @@ class Paypal implements PaymentMethod, NeedsCard
         $this->cardNumber = $cardNumber;
     }
 
-    function validatePayment()
+    public function validatePayment()
     {
         return $this->cardNumber === '1234';
     }
-
 }

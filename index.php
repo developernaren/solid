@@ -1,5 +1,5 @@
 <?php
-ini_set('display_errors',1);
+ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
 
@@ -26,10 +26,3 @@ $pay->setItem($bakery);
 $pay->setPaymentMethod($paymentMethod);
 $pay->pay();
 echo $pay->getSummary();
-
-
-
-
-
-
-

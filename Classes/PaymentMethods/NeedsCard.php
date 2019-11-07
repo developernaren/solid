@@ -4,5 +4,5 @@ namespace Classes\PaymentMethods;
 
 interface NeedsCard
 {
-    function validatePayment();
+    public function validatePayment();
 }

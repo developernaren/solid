@@ -8,7 +8,6 @@ use Mockery;
 
 class CakeTest extends TestCase
 {
-
     private $cake;
 
     public function setUp()
@@ -27,6 +26,4 @@ class CakeTest extends TestCase
     {
         $this->assertNotSame($this->cake->getCost(), 100);
     }
-
-
 }

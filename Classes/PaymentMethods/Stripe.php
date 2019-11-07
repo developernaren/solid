@@ -7,31 +7,30 @@ use Classes\Bakery;
 class Stripe implements PaymentMethod, NeedsCard
 {
     public $cardNumber;
-    public  $item;
+    public $item;
 
-    function setItem(Bakery $bakery)
+    public function setItem(Bakery $bakery)
     {
         $this->item = $bakery;
     }
 
-    function getItemName()
+    public function getItemName()
     {
         return $this->item->getName();
     }
 
-    function getName()
+    public function getName()
     {
         return 'name';
     }
 
-    function validatePayment()
+    public function validatePayment()
     {
         return $this->cardNumber === '5678';
     }
 
     public function getAmount()
     {
-
     }
 
     /**
@@ -49,5 +48,4 @@ class Stripe implements PaymentMethod, NeedsCard
     {
         $this->cardNumber = $cardNumber;
     }
-
 }
